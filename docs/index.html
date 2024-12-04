@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light" />
+  <link rel="stylesheet" href="css/wing.min.css" />
+  <title>Wing kitchen sink</title>
+
+ </head>
+ <body>
+  <main class="container">
+   <h1>Typography</h1>
+   <div class="container">
+    <h1>H1 Heading</h1>
+    <h2>H2 Heading</h2>
+    <h3>H3 Heading</h3>
+    <h4>H4 Heading</h4>
+    <h5>H5 Heading</h5>
+    <h6>H6 Heading</h6>
+    <p>&lt;strong&gt;<strong>Strong text</strong>&lt;/strong&gt;</p>
+    <p>&lt;i&gt;<i>Italic text</i>&lt;/i&gt;</p>
+    <p>&lt;u&gt;<u>Underline text</u>&lt;/u&gt;</p>
+    <p>&lt;del&gt;<del>Deleted text</del>&lt;/del&gt;</p>
+    <p>&lt;ins&gt;<ins>Inserted text</ins>&lt;/ins&gt;</p>
+    <p>&lt;a&gt;<a>Link</a>&lt;/a&gt;</p>
+   </div>
+
+   <h1>Navigation</h1>
+
+   <nav>
+    <div class="nav">
+     <h5 class="nav-logo">Brand</h5>
+     <a class="nav-item">Link 1</a>
+     <a class="nav-item">Link 2</a>
+     <div class="nav-item">
+      <a class="nav-item dropdown" data-toggle="dropdown">Dropdown</a>
+      <ul>
+       <div class="background-white">
+        <li class="nav-item">Item 1</li>
+        <li class="nav-item">Item 2</li>
+        <li class="nav-item">Item 3</li>
+       </div>
+      </ul>
+     </div>
+     <div class="nav-menu">
+      <a class="nav-item">Menu Item 1</a>
+     </div>
+     <div class="nav-item">After menu item</div>
+    </div>
+   </nav>
+
+   <p>The above navigation bar is produced with the following code:</p>
+   <pre>
+    <code>
+     &lt;nav&gt;
+      &lt;div class="nav"&gt;
+       &lt;h5 class="nav-logo"&gt;Brand&lt;/h5&gt;
+       &lt;a class="nav-item" href="#"&gt;Link 1&lt;/a&gt;
+       &lt;a class="nav-item" href="#"&gt;Link 2&lt;/a&gt;
+       &lt;div class="nav-item"&gt;
+        &lt;a class="nav-item dropdown" data-toggle="dropdown"&gt;Dropdown&lt;/a&gt;
+        &lt;ul&gt;
+         &lt;div class="background-white"&gt;
+          &lt;li class="nav-item"&gt;Item 1&lt;/li&gt;
+          &lt;li class="nav-item"&gt;Item 2&lt;/li&gt;
+          &lt;li class="nav-item"&gt;Item 3&lt;/li&gt;
+         &lt;/div&gt;
+        &lt;/ul&gt;
+       &lt;/div&gt;
+       &lt;div class="nav-menu" href="#"&gt;
+        &lt;a class="nav-item" href="#"&gt;Menu Item 1&lt;/a&gt;
+       &lt;/div&gt;
+       &lt;div class="nav-item" href="#"&gt;After menu item&lt;/div&gt;
+      &lt;/div&gt;
+     &lt;/nav&gt;
+    </code>
+   </pre>
+
+   <p>For the dropdown menu, is necesary to load <code>js/wing.dropdown.js</code> at the end of the body with:</p>
+
+   <pre>
+    <code>
+     &lt;script type="text/javascript" src="js/wing.dropdown.js"&gt;&lt;/script&gt;
+    </code>
+   </pre>
+
+   <h1>Grid</h1>
+
+   Grids are flex, meaning that as many columns as you add, they will be displayed next to each other and everyone takes the same space:
+
+   <div class="row">
+    <div class="col background-gray">
+     <p>Column 1, unique</p>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="col background-gray">
+     <p>Column 1</p>
+    </div>
+    <div class="col background-gray">
+     <p>Column 2</p>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="col background-gray">
+     <p>Column 1</p>
+    </div>
+    <div class="col background-gray">
+     <p>Column 2</p>
+    </div>
+    <div class="col background-gray">
+     <p>Column 3</p>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="col background-gray">
+     <p>Column 1</p>
+    </div>
+    <div class="col background-gray">
+     <p>Column 2</p>
+    </div>
+    <div class="col background-gray">
+     <p>Column 3</p>
+    </div>
+    <div class="col background-gray">
+     <p>Column 4</p>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="col background-gray">
+     <p>Column 1</p>
+    </div>
+    <div class="col background-gray">
+     <p>Column 2</p>
+    </div>
+    <div class="col background-gray">
+     <p>Column 3</p>
+    </div>
+    <div class="col background-gray">
+     <p>Column 4</p>
+    </div>
+    <div class="col background-gray">
+     <p>Column n</p>
+    </div>
+   </div>
+
+   <pre>
+    <code>
+     &lt;div class="row"&gt;
+      &lt;div class="col"&gt;
+       &lt;p&gt;Column 1&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col"&gt;
+       &lt;p&gt;Column 2&lt;/p&gt;
+      &lt;/div&gt;
+
+      As many as needed&hellip;
+
+      &lt;div class="col"&gt;
+       &lt;p&gt;Column n&lt;/p&gt;
+      &lt;/div&gt;
+     &lt;/div&gt;
+    </code>
+   </pre>
+
+
+   <h2>Grid with col size</h2>
+
+   <code>col-1</code> to <code>col-12</code> take a value proportional to the value. E.g. two <code>col-12</code> make them to take half the space. That means they don't need to add to 12, like for example Bootstrap, but it helps with the proportions.
+
+   <div class="row">
+    <div class="col-12 background-gray">
+     <p class="center">col-12</p>
+    </div>
+    <div class="col-12 background-gray">
+     <p class="center">col-12</p>
+    </div>
+   </div>
+
+
+   <div class="row">
+    <div class="col-1 background-gray">
+     <p class="center">col-1</p>
+    </div>
+    <div class="col-11 background-gray">
+     <p class="center">col-11</p>
+    </div>
+   </div>
+
+   <pre>
+    <code>
+     &lt;div class="row"&gt;
+      &lt;div class="col-1"&gt;
+       &lt;p&gt;Col 1&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-11"&gt;
+       &lt;p&gt;Col 11&lt;/p&gt;
+      &lt;/div&gt;
+     &lt;/div&gt;
+    </code>
+   </pre>
+
+   <div class="row">
+    <div class="col-1 background-gray">
+     <p class="center">col-1</p>
+    </div>
+    <div class="col-2 background-gray">
+     <p class="center">col-2</p>
+    </div>
+    <div class="col-3 background-gray">
+     <p class="center">col-3</p>
+    </div>
+    <div class="col-4 background-gray">
+     <p class="center">col-4</p>
+    </div>
+    <div class="col-5 background-gray">
+     <p class="center">col-5</p>
+    </div>
+   </div>
+
+   <h1>Buttons</h1>
+    <button>Default button</button>
+    <button class="outline">Outline button</button>
+
+    <pre>
+     <code>
+      &lt;button&gt;Default button&lt;/button&gt;
+      &lt;button class="outline"&gt;Outline button&lt;/button&gt;
+     </code>
+    </pre>
+
+   <h1>Forms</h1>
+
+   <p>Form inputs are auto styled, you need no classes to get the following look:</p>
+
+    <form>
+     <label for="id_text">Label:</label>
+     <input id="id_text" type="text" placeholder="Username">
+     <div class="row">
+      <div class="col">
+       <input type="password" placeholder="Password">
+      </div>
+      <div class="col">
+       <input type="email" placeholder="Email">
+      </div>
+     </div>
+     <input type="search" placeholder="Search">
+     <input type="number" placeholder="Number">
+     <input type="file" placeholder="File">
+     <input type="tel" placeholder="Telephone">
+     <input type="date" placeholder="Date">
+
+     <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+     </select>
+
+     <fieldset>
+      <legend>Fieldset checkbox legend</legend>
+      <div>
+       <input type="checkbox" id="option1" name="option1" checked>
+       <label for="option1">Option 1</label>
+      </div>
+      <div>
+       <input type="checkbox" id="option2" name="option2">
+       <label for="option2">Option 2</label>
+      </div>
+     </fieldset>
+
+     <fieldset>
+      <legend>Fieldset radio legend</legend>
+      <div>
+       <input type="radio" id="option3" name="option3" checked>
+       <label for="option3">Option 3</label>
+      </div>
+      <div>
+       <input type="radio" id="option4" name="option4">
+       <label for="option4">Option 4</label>
+      </div>
+     </fieldset>
+
+     <textarea placeholder="Textarea"></textarea>
+     <textarea type="text" placeholder="Textarea with type=text"></textarea>
+     <div>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+     </div>
+     <div>
+      <input type="submit" class="outline" value="Submit">
+      <input type="reset" class="outline" value="Reset">
+     </div>
+
+    </form>
+
+   <h1>Lists</h1>
+    <div class="row">
+     <div class="col">
+      <ul>
+       <li>Item 1</li>
+       <li>Item 2</li>
+       <ul>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <ul>
+         <li>Item 5</li>
+         <li>Item 6</li>
+        </ul>
+       </ul>
+       <li>Item 7</li>
+      </ul>
+     </div>
+     <div class="col">
+      <ol>
+       <li>Item 1</li>
+       <li>Item 2</li>
+       <ol>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <ol>
+         <li>Item 5</li>
+         <li>Item 6</li>
+        </ol>
+       </ol>
+       <li>Item 7</li>
+      </ol>
+     </div>
+    </div>
+
+   <h1>Tables</h1>
+   <table class="table responsive">
+    <thead>
+     <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+      <th>Header 3</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>Col 1</td>
+      <td>Col 2</td>
+      <td>Col 3</td>
+     </tr>
+     <tr>
+      <td>Col 1</td>
+      <td>Col 2</td>
+      <td>Col 3</td>
+     </tr>
+    </tbody>
+   </table>
+
+   <h1>Cards</h2>
+
+   <p>Cards are displayed up to two per line. <strong>Here is a change with the original wing.css</strong>: this .css has nested classes and you don't need to specify <code>class="card-header"</code>,  <code>class="card-body"</code> or  <code>class="card-footer"</code>, classes. They are just <code>class="header"</code>, <code>class="body"</code> and <code>class="footer"</code>.
+
+   <div class="cards">
+    <div class="card">
+     <div class="header">Card header</div>
+     <div class="body">Card body</div>
+     <div class="footer">Card footer</div>
+    </div>
+    <div class="card">
+     <div class="header">Card 2 header</div>
+     <div class="body">Card 2 body</div>
+     <div class="footer">
+      <div class="item">Footer Item 1</div>
+      <div class="item">Footer Item 2</div>
+     </div>
+    </div>
+    <div class="card">
+     <div class="header">Card 3 header</div>
+     <div class="body">
+      <img src="img/sample.jpg" alt="Sample image">
+      <caption>Author: <a href="https://www.instagram.com/tanya_snimaet/">@tanya_snimaet</a></caption>
+      <p>Card 3 body</p>
+     </div>
+     <div class="footer">
+      <div class="item">Footer Item 1</div>
+      <div class="item">Footer Item 2</div>
+     </div>
+    </div>
+   </div>
+
+   <pre>
+    <code>
+     &lt;div class="cards"&gt;
+      &lt;div class="card"&gt;
+       &lt;div class="header"&gt;Card 3 header&lt;/div&gt;
+       &lt;div class="body"&gt;
+        &lt;img src="img/sample.jpg" alt="Sample image"&gt;
+        &lt;caption&gt;Author: &lt;a href="https://www.instagram.com/tanya_snimaet/"&gt;@tanya_snimaet&lt;/a&gt;&lt;/caption&gt;
+        &lt;p&gt;Card 3 body&lt;/p&gt;
+       &lt;/div&gt;
+       &lt;div class="footer"&gt;
+        &lt;div class="item"&gt;Footer Item 1&lt;/div&gt;
+        &lt;div class="item"&gt;Footer Item 2&lt;/div&gt;
+       &lt;/div&gt;
+      &lt;/div&gt;
+     &lt;/div&gt;
+    </code>
+   </pre>
+   <h1>Utilities</h1>
+
+   <h2>Text alignment</h2>
+
+   <code>&lt;div class=pull-right&gt;Right floating div&lt;/div&gt;</code>
+   <p>
+    <div class="pull-right background-gray">Right floating div</div>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+   </p>
+
+   <code>&lt;div class=pull-left&gt;Left floating div&lt;/div&gt;</code>
+   <p>
+    <div class="pull-left background-gray">Left floating div</div>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+   </p>
+
+   <code>&lt;p class=text-center&gt;Center aligned text&lt;/p&gt;</code>
+   <p class="text-center">Center aligned text<br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+   </p>
+
+   <code>&lt;p class=text-left&gt;Left aligned text&lt;/p&gt;</code>
+   <p class="text-left">Left aligned text<br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+   </p>
+
+   <code>&lt;p class=text-right&gt;Right aligned text&lt;/p&gt;</code>
+   <p class="text-right">Right aligned text<br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+   </p>
+
+   <h2>Width and height, size, alignment&hellip;</h2>
+
+   <h3>full-width</h3>
+   <code>&lt;div class=full-width&gt;Full width&lt;/div&gt;</code>
+   <div class="full-width" style="background-color:#f1f1f1; margin: 10px 0">Full width</div>
+
+   <h3>full-height</h3>
+   <code>&lt;div class=full-height&gt;Full height&lt;/div&gt;</code>
+
+   <div class="full-height" style="background-color:#f1f1f1; margin: auto; margin-top: 1em; width: 50vw">Full height</div>
+
+   <h3>full-screen</h3>
+
+   <code>&lt;div class=full-screen&gt;Full screen&lt;/div&gt;</code>
+   <div class="full-screen" style="background-color:#f1f1f1; margin: 10px 0">Full screen</div>
+
+   <h3>fixed</h3>
+
+   <p>There should be a fixed element in the bottom right corner of the screen, created with this class.</p>
+
+   <code>&lt;div class="fixed" style="width: 100px; height: 50px; bottom: 50px; right: 100px;"&gt;Fixed&lt;/div&gt;</code>
+
+   <div class="fixed" style="width: 100px; height: 50px; bottom: 50px; right: 100px;">
+    <div style="background-color:#f1f1f1; border: 1px solid #333030; padding: 1rem">"fixed" class on container div (see in "Utilities section)</div>
+   </div>
+
+   <h3>hidden</h3>
+   <code>&lt;div class="hidden"&gt;Hidden&lt;/div&gt;</code>
+   <div> There's a hidden element after this </div>
+   <div class="hidden">Hidden</div>
+   <div> There's a hidden element before this </div>
+
+   <h3>vertical-align</h3>
+   <pre>
+    <code>
+     &lt;div class="vertical-align"&gt;
+      &lt;div&gt;Item&lt;/div&gt;
+     &lt;/div&gt;
+    </code>
+   </pre>
+
+   <div class="vertical-align" style="background-color:#f1f1f1; height: 100px; margin: auto; width: 50vw">
+    <div style="border: 1px solid #333030;">Item</div>
+   </div>
+
+   <h3>horizontal-align</h3>
+   <pre>
+    <code>
+     &lt;div class="horizontal-align"&gt;
+      &lt;div&gt;Item&lt;/div&gt;
+     &lt;/div&gt;
+    </code>
+   </pre>
+
+   <div class="horizontal-align" style="background-color:#f1f1f1; height: 100px; width: 50vw; margin: auto">
+    <div style="border: 1px solid #333030;">Item 1</div>
+   </div>
+
+   <h3>center, right, left</h3>
+   <pre>
+    <code>
+     &lt;div class="center"&gt;
+      &lt;div&gt;center&lt;/div&gt;
+     &lt;/div&gt;
+    </code>
+   </pre>
+   <div class="center" style="background-color:#f1f1f1; margin: auto; width: 50vw">
+    <div style="border: 1px solid #333030;">center</div>
+   </div>
+
+   <pre>
+    <code>
+     &lt;div class="right"&gt;
+      &lt;div&gt;right&lt;/div&gt;
+     &lt;/div&gt;
+    </code>
+   </pre>
+   <div class="right" style="background-color:#f1f1f1; margin: auto; width: 50vw">
+    <div style="border: 1px solid #333030;">right</div>
+   </div>
+
+   <pre>
+    <code>
+     &lt;div class="left"&gt;
+      &lt;div&gt;left&lt;/div&gt;
+     &lt;/div&gt;
+    </code>
+   </pre>
+   <div class="left" style="background-color:#f1f1f1; margin: auto; width: 50vw;">
+    <div style="border: 1px solid #333030;">left</div>
+   </div>
+
+   <h1>Flex</h1>
+
+   <p>The following flex arrangements are created with the following code, replacing <code>xxxx-xxxx</code> with the classes shown below:</p>
+   <pre>
+    <code>
+     &lt;div class="flex xxxx-xxxx"&gt;
+      &lt;div&gt;First&lt;/div&gt;
+      &lt;div&gt;Second&lt;/div&gt;
+      &lt;div&gt;Third&lt;/div&gt;
+     &lt;/div&gt;
+    </code>
+   </pre>
+
+   <h3>justify-start</h3>
+   <div class="flex justify-start" style="background-color: #f1f1f1; width: 50vw; margin:auto;">
+    <div class="border-black">First</div>
+    <div class="border-black">Second</div>
+    <div class="border-black">Third</div>
+   </div>
+
+   <h3>justify-center</h3>
+   <div class="flex justify-center" style="background-color: #f1f1f1; width: 50vw; margin:auto;">
+    <div class="border-black">First</div>
+    <div class="border-black">Second</div>
+    <div class="border-black">Third</div>
+   </div>
+
+   <h3>justify-end</h3>
+   <div class="flex justify-end" style="background-color: #f1f1f1; width: 50vw; margin:auto;">
+    <div class="border-black">First</div>
+    <div class="border-black">Second</div>
+    <div class="border-black">Third</div>
+   </div>
+
+   <h3>align-start</h3>
+   <div class="flex align-start" style="background-color: #f1f1f1; height: 100px; width: 50vw; margin:auto;">
+    <div class="border-black">First</div>
+    <div class="border-black">Second</div>
+    <div class="border-black">Third</div>
+   </div>
+
+   <h3>align-center</h3>
+   <div class="flex align-center" style="background-color: #f1f1f1; height: 100px; width: 50vw; margin:auto;">
+    <div class="border-black">First</div>
+    <div class="border-black">Second</div>
+    <div class="border-black">Third</div>
+   </div>
+
+   <h3>align-end</h3>
+   <div class="flex align-end" style="background-color: #f1f1f1; height: 100px; width: 50vw; margin:auto;">
+    <div class="border-black">First</div>
+    <div class="border-black">Second</div>
+    <div class="border-black">Third</div>
+   </div>
+
+   <h3>direction-vertical</h3>
+   <div class="flex direction-vertical" style="background-color: #f1f1f1; height: 100px; width: 50vw; margin:auto;">
+    <div class="border-black">First</div>
+    <div class="border-black">Second</div>
+    <div class="border-black">Third</div>
+   </div>
+
+   <h3>direction-horizontal</h3>
+   <div class="flex direction-horizontal" style="background-color: #f1f1f1; height: 100px; width: 50vw; margin:auto;">
+    <div class="border-black">First</div>
+    <div class="border-black">Second</div>
+    <div class="border-black">Third</div>
+   </div>
+
+   <h1>Borders and Colors</h1>
+
+   <p>Add the following classes to your elements. Note that some gray backgrounds are added here to <code>xxxx-white</code> classes to show the effect, but the styles don't do that.</p>
+
+   <pre>
+    <code>
+     &lt;div class="border-xxxx color-xxxx background-xxxx"&gt;Content&lt;/div&gt;
+    </code>
+   </pre>
+
+   <div class="flex direction-horizontal" style="padding: 1em;">
+    <div class="border-black" style="padding: 2px;margin: 2px">border-black</div>
+    <div class="border-gray" style="padding: 2px;margin: 2px">border-gray</div>
+    <div class="background-gray" style="padding: 2px">
+     <div class="border-white" style="padding: 2px;margin: 2px">border-white</div>
+    </div>
+    <div class="border-blue" style="padding: 2px;margin: 2px">border-blue</div>
+    <div class="border-red" style="padding: 2px;margin: 2px">border-red</div>
+    <div class="border-yellow" style="padding: 2px;margin: 2px">border-yellow</div>
+    <div class="border-green" style="padding: 2px;margin: 2px">border-green</div>
+   </div>
+
+   <div class="flex direction-horizontal" style="padding: 1em;">
+    <div class="color-black" style="padding: 2px;margin: 2px">color-black</div>
+    <div class="color-gray" style="padding: 2px;margin: 2px">color-gray</div>
+    <div class="background-gray" style="padding: 2px">
+     <div class="color-white" style="padding: 2px;margin: 2px">color-white</div>
+    </div>
+    <div class="color-blue" style="padding: 2px;margin: 2px">color-blue</div>
+    <div class="color-red" style="padding: 2px;margin: 2px">color-red</div>
+    <div class="color-yellow" style="padding: 2px;margin: 2px">color-yellow</div>
+    <div class="color-green" style="padding: 2px;margin: 2px">color-green</div>
+   </div>
+
+   <div class="flex direction-horizontal" style="padding: 1em;">
+    <div class="background-black color-gray" style="padding: 2px;margin: 2px">background-black</div>
+    <div class="background-gray" style="padding: 2px;margin: 2px">background-gray</div>
+    <div class="background-gray" style="padding: 2px">
+     <div class="background-white" style="padding: 2px;margin: 2px">background-white</div>
+    </div>
+    <div class="background-blue" style="padding: 2px;margin: 2px">background-blue</div>
+    <div class="background-red" style="padding: 2px;margin: 2px">background-red</div>
+    <div class="background-yellow" style="padding: 2px;margin: 2px">background-yellow</div>
+    <div class="background-green" style="padding: 2px;margin: 2px">background-green</div>
+   </div>
+
+   <div class="flex direction-horizontal" style="padding: 1em;">
+    <div class="border-black border-rounded center" style="padding: 2px; margin: 2px;">border-rounded</div>
+    <div class="border-black border-circle center" style="padding: 2px; margin: 2px; width: 100px; height: 100px;">border-circle</div>
+   </div>
+
+   <h1>Misc</h1>
+
+   <h3>Horizontal rule</h3>
+
+   <code>&lt;hr&gt;</code>
+
+   <hr>
+
+   <h3>Code block</h3>
+   <p>Lines don't wrap. Background gray is added by the stylesheet:</p>
+   <code>
+    padding: 0.2rem 0.5rem;
+    margin: 0 0.2rem;
+    font-size: 90%;
+    white-space: nowrap;
+   </code>
+
+   <h3>Pre and code block</h3>
+   <p>Code is preformated. Background gray is added by the stylesheet:</p>
+   <pre>
+    <code>
+     padding: 0.2rem 0.5rem;
+     margin: 0 0.2rem;
+     font-size: 90%;
+     white-space: nowrap;
+     background: #F1F1F1;
+     border: 1px solid #E1E1E1;
+     border-radius: 4px;
+     font-family: "Consolas", "Monaco"
+    </code>
+   </pre>
+
+  </main>
+  <script type="text/javascript" src="js/wing.dropdown.js"></script>
+ </body>
+</html>
+
