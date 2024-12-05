@@ -622,26 +622,22 @@ hr {
  .dropdown {
   text-decoration: none;
  }
- a::after {
+ a.dropdown::after {
   content: " ▼";
   padding-left: 0.5rem;
  }
- a.active::after {
+ a.dropdown.active::after {
   content: " ▲";
  }
  ul {
   max-height: 0;
-  display: none;
   margin: 0px;
   background: #fff;
-  li {
-   list-style: none;
-  }
- }
- ul.show {
-  display: block;
   div {
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  li {
+   list-style: none;
   }
  }
 }
