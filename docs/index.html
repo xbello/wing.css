@@ -29,49 +29,51 @@
    <h1>Navigation</h1>
 
    <nav>
-    <div class="nav">
-     <h5 class="nav-logo">Brand</h5>
-     <a class="nav-item">Link 1</a>
-     <a class="nav-item">Link 2</a>
-     <div class="nav-item">
-      <a class="nav-item dropdown" data-toggle="dropdown">Dropdown</a>
+    <div class="nav background-white">
+     <img class="logo" src="img/logo.png" alt="Wing logo">
+     <h5 class="brand">Brand</h5>
+     <a class="item">Link 1</a>
+     <a class="item">Link 2</a>
+     <div class="item">
+      <a class="dropdown" data-toggle="dropdown">Dropdown</a>
       <ul class="hidden">
        <div class="background-white">
-        <li class="nav-item">Item 1</li>
-        <li class="nav-item">Item 2</li>
-        <li class="nav-item">Item 3</li>
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
        </div>
       </ul>
      </div>
-     <div class="nav-menu">
-      <a class="nav-item">Menu Item 1</a>
+     <div class="menu">
+      <a class="item">Menu Item 1</a>
      </div>
-     <div class="nav-item">After menu item</div>
+     <div class="item">After menu item</div>
     </div>
    </nav>
 
-   <p>The above navigation bar is produced with the following code:</p>
+   <p>The above navigation bar is produced with the following code. <strong>Here is a change with the original wing.css</strong>: this .css has nested classes and you don't need to specify <code>class="nav-logo"</code>, <code>class="nav-item"</code> or <code>class="nav-menu"</code> classes. They are just <code>class="logo"</code>, <code>class="item"</code>, <code>class="menu"</code> and so on:</p>
    <pre>
     <code>
      &lt;nav&gt;
       &lt;div class="nav"&gt;
-       &lt;h5 class="nav-logo"&gt;Brand&lt;/h5&gt;
-       &lt;a class="nav-item" href="#"&gt;Link 1&lt;/a&gt;
-       &lt;a class="nav-item" href="#"&gt;Link 2&lt;/a&gt;
-       &lt;div class="nav-item"&gt;
-        &lt;a class="nav-item dropdown" data-toggle="dropdown"&gt;Dropdown&lt;/a&gt;
+       &lt;img class="logo" src="img/logo.png" alt="Wing logo"&gt;
+       &lt;h5 class="brand"&gt;Brand&lt;/h5&gt;
+       &lt;a class="item" href="#"&gt;Link 1&lt;/a&gt;
+       &lt;a class="item" href="#"&gt;Link 2&lt;/a&gt;
+       &lt;div class="item"&gt;
+        &lt;a class="item dropdown" data-toggle="dropdown"&gt;Dropdown&lt;/a&gt;
         &lt;ul class="hidden"&gt;
          &lt;div class="background-white"&gt;
-          &lt;li class="nav-item"&gt;Item 1&lt;/li&gt;
-          &lt;li class="nav-item"&gt;Item 2&lt;/li&gt;
-          &lt;li class="nav-item"&gt;Item 3&lt;/li&gt;
+          &lt;li class="item"&gt;Item 1&lt;/li&gt;
+          &lt;li class="item"&gt;Item 2&lt;/li&gt;
+          &lt;li class="item"&gt;Item 3&lt;/li&gt;
          &lt;/div&gt;
         &lt;/ul&gt;
        &lt;/div&gt;
-       &lt;div class="nav-menu" href="#"&gt;
-        &lt;a class="nav-item" href="#"&gt;Menu Item 1&lt;/a&gt;
+       &lt;div class="menu" href="#"&gt;
+        &lt;a class="item" href="#"&gt;Menu Item 1&lt;/a&gt;
        &lt;/div&gt;
-       &lt;div class="nav-item" href="#"&gt;After menu item&lt;/div&gt;
+       &lt;div class="item" href="#"&gt;After menu item&lt;/div&gt;
       &lt;/div&gt;
      &lt;/nav&gt;
     </code>
@@ -357,7 +359,7 @@
 
    <h1>Cards</h2>
 
-   <p>Cards are displayed up to two per line. <strong>Here is a change with the original wing.css</strong>: this .css has nested classes and you don't need to specify <code>class="card-header"</code>,  <code>class="card-body"</code> or  <code>class="card-footer"</code>, classes. They are just <code>class="header"</code>, <code>class="body"</code> and <code>class="footer"</code>.
+   <p>Cards are displayed up to two per line. <strong>Here is a change with the original wing.css</strong>: this .css has nested classes and you don't need to specify <code>class="card-header"</code>, <code>class="card-body"</code> or <code>class="card-footer"</code> classes. They are just <code>class="header"</code>, <code>class="body"</code> and <code>class="footer"</code>.
 
    <div class="cards">
     <div class="card">
